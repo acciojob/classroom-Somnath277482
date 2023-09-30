@@ -43,6 +43,4 @@ public class StudentService {
     public void deleteAllTeachers() {
         repo.deleteAllTeachers();
     }
-
-
 }
