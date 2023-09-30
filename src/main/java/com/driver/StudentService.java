@@ -1,46 +1,45 @@
 package com.driver;
 
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
-@Service
 public class StudentService {
-    private StudentRepository repo=new StudentRepository();
 
-    public void addStudent(Student student) {
-        repo.addStudent(student);
+    StudentRepositry studentRepositry= new StudentRepositry();
+
+    public  void addStudent(Student student) {
+        studentRepositry.addStudent(student);
     }
 
     public void addTeacher(Teacher teacher) {
-        repo.addTeacher(teacher);
+        studentRepositry.addTeacher(teacher);
     }
 
     public void addStudentTeacherPair(String student, String teacher) {
-        repo.addStudentTeacherPair(student,teacher);
+        studentRepositry.addStudentTeacherPair(student, teacher);
     }
 
     public Student getStudentByName(String name) {
-        return repo.getStudentByName(name);
+        return studentRepositry.getStudentByName(name);
     }
 
     public Teacher getTeacherByName(String name) {
-        return repo.getTeacherByName(name);
+        return studentRepositry.getTeacherByName(name);
     }
 
     public List<String> getStudentsByTeacherName(String teacher) {
-        return repo.getStudentsByTeacherName(teacher);
+
+        return studentRepositry.getStudentsByTeacherName(teacher);
     }
 
     public List<String> getAllStudents() {
-        return repo.getAllStudentts();
+        return studentRepositry.getAllStudents();
     }
 
     public void deleteTeacherByName(String teacher) {
-        repo.deleteTeacherByName(teacher);
+        studentRepositry.deleteTeacherByName(teacher);
     }
 
     public void deleteAllTeachers() {
-        repo.deleteAllTeachers();
+        studentRepositry.deleteAllTeachers();
     }
 }
